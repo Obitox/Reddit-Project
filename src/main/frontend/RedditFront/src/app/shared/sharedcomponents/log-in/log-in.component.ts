@@ -1,8 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import {Subscription} from "rxjs/Subscription";
 
-import {User} from "../user/user";
-import {UserService} from "../user/user.service";
+import {User} from "../../user/user";
+import {UserService} from "../../user/user.service";
 
 @Component({
   selector: 'rd-log-in',

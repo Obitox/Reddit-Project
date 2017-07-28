@@ -1,0 +1,18 @@
+<ul class="nav nav-tabs">
+  <li role="presentation"><a [routerLink]="['/']">Popular</a></li>
+  <li role="presentation"><a [routerLink]="['/new']" >New</a></li>
+  <li role="presentation"><a>Rising</a></li>
+</ul>
+<div class="container">
+  <div class="row">
+    <div class="col col-md-8">
+      <div class="outer-outlet">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <div class="col-6 col-md-4">
+      <rd-log-in></rd-log-in> <!-- Log in Component -->
+    </div>
+  </div>
+</div>
+

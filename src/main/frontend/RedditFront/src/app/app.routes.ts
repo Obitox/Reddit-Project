@@ -1,19 +1,17 @@
 import {Routes, RouterModule, provideRoutes} from '@angular/router';
 
-import {AppComponent} from "./app.component";
-import {LogInComponent} from "./log-in/log-in.component";
-import {RedditPageComponent} from "./reddit-page/reddit-page.component";
+import {NewComponent} from "./components/new/new.component";
+import {PopularComponent} from "./components/popular/popular.component";
 
 const APP_ROUTES: Routes = [
   {
-    path: 'log-in', component: LogInComponent
+    path: '',
+    component: PopularComponent
   },
   {
-    path: 'reddit-page', component: RedditPageComponent
+    path: 'new',
+    component: NewComponent
   },
-  {
-    path: '**', redirectTo: 'log-in', pathMatch: 'full'
-  }
 ];
 
 export const APP_ROUTES_PROVIDER = [
