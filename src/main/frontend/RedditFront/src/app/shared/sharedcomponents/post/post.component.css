@@ -1,0 +1,10 @@
+.container {
+  border: 1px solid gray;
+  margin: 5px 5px;
+}
+.vote {
+  max-font-size: 10px;
+}
+.test{
+  max-font-size: 20px;
+}

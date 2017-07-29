@@ -1,0 +1,17 @@
+<div class="container" *ngFor="let post of posts; let i = index; ">
+  <div class="pull-left" (click)="upVoted(i)">
+    <label class="vote">{{post.vote}}</label>
+  </div>
+<a target="_parent" [href]="post.postLink">
+  <div class="pull-left">{{post.id}}</div>
+  <div class="pull-left">
+    <img class="img-responsive"
+         src="{{post.thumbnail}}"
+         style="max-height: 50px;"/>
+  </div>
+  <label>Title:{{post.title}}</label>
+  <label>Link:{{post.postLink}}</label>
+  <label>Username:{{post.username}}</label>
+  <label>Date Posted:{{post.date}}</label>
+</a>
+</div>

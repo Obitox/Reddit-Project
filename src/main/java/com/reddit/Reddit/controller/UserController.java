@@ -17,10 +17,6 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    //@RequestMapping(value="/Pera")
-    //public List<User> test(){
-    //    return userRepository.getUserByUsername("Pera");
-    //}
     @RequestMapping(value="/allUsers")
     public List<User> allUsers(){
         return userRepository.getAllBy();

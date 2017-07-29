@@ -15,5 +15,4 @@ export class UserService {
     return this.http.get(`/user/allUsers`)
       .map((res:Response) => res.json());
   }
-
 }
