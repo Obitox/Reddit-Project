@@ -1,10 +1,19 @@
-.container {
-  border: 1px solid gray;
-  margin: 5px 5px;
+.post-container {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  overflow: hidden;
+  background: #f3f3f3;
 }
-.vote {
-  max-font-size: 10px;
+.post-container h4 {
+  margin: 0;
+  margin-bottom: 10px;
+  line-height: 25px;
 }
-.test{
-  max-font-size: 20px;
+.post-container span {
+  font-size: 13px;
+}
+.post-container a {
+  color: #333;
 }

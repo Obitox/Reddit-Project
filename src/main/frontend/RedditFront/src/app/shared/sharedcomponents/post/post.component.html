@@ -1,17 +1,21 @@
-<div class="container" *ngFor="let post of posts; let i = index; ">
-  <div class="pull-left" (click)="upVoted(i)">
-    <label class="vote">{{post.vote}}</label>
+<div class="post-container" *ngFor="let post of posts; let i = index; ">
+  <div class="row">
+    <div class="col-xs-1" (click)="upVoted(i)">
+      <label class="vote">{{post.vote}}</label>
+    </div>
+    <a target="_parent" [href]="post.postLink">
+      <div class="pull-left hidden">{{post.id}}</div>
+      <div class="col-xs-2">
+        <img class="img-responsive"
+             src="{{post.thumbnail}}"
+             style="max-height: 50px;"/>
+      </div>
+      <div class="col-xs-8">
+        <h4>{{post.title}}</h4>
+        <!--<label>Link:{{post.postLink}}</label>-->
+        <span>Username: {{post.username}}</span>
+        <span>Date Posted: {{post.date}}</span>
+      </div>
+    </a>
   </div>
-<a target="_parent" [href]="post.postLink">
-  <div class="pull-left">{{post.id}}</div>
-  <div class="pull-left">
-    <img class="img-responsive"
-         src="{{post.thumbnail}}"
-         style="max-height: 50px;"/>
-  </div>
-  <label>Title:{{post.title}}</label>
-  <label>Link:{{post.postLink}}</label>
-  <label>Username:{{post.username}}</label>
-  <label>Date Posted:{{post.date}}</label>
-</a>
 </div>
