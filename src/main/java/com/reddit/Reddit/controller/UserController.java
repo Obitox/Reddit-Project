@@ -2,12 +2,14 @@ package com.reddit.Reddit.controller;
 
 import com.reddit.Reddit.model.User;
 import com.reddit.Reddit.repository.UserRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping(value = "/user")
 public class UserController {
 
