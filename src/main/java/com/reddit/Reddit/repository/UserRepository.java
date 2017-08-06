@@ -9,4 +9,5 @@ import java.util.List;
 @EnableJpaRepositories(basePackages = "repository")
 public interface UserRepository extends JpaRepository<User, Integer> {
     List<User> getAllBy();
+    boolean getUserByUsernameAndPassword(String username, String password);
 }
