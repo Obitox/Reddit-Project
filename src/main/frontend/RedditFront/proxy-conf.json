@@ -1,10 +1,10 @@
 {
   "/user":{
-    "target": "http://localhost:8080",
+    "target": "https://localhost:8443",
     "secure": false
   },
   "/post":{
-    "target": "http://localhost:8080",
+    "target": "https://localhost:8443",
     "secure": false
   }
 }
