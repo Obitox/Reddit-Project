@@ -14,11 +14,11 @@ public class SessionDataController {
 
     @RequestMapping(value = "/user/session")
     public String addToSession(HttpServletRequest request,
-                               @RequestParam("attr") String attribute,
-                               @RequestParam("value") String value)
+                               String attribute,
+                               String value)
     {
         HttpSession session = request.getSession();
         session.setAttribute(attribute, value);
-        return "Nothing for now";
+        return "redirect:/";
     }
 }
