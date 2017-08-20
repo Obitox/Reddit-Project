@@ -18,22 +18,29 @@ export class LogInComponent implements OnDestroy{
 
   }
 
-  onSubmit(value) : boolean {
-    this.subscription = this.userService.getAllUsers().subscribe(
+  onSubmit(value) : void {
+    this.subscription = this.userService.authenticateUser(value.username, value.password).subscribe(
       dataFromServer => {
-        this.users = dataFromServer;
-
-        for(let item of this.users){
-          if(item.username == value.username && item.password == value.password){
-            return this.correctData = true;
-          }
+        if(dataFromServer){
+          this.correctData = true;
         }
       }
     );
 
-    /*<3* <-- this is from Marta */
 
-    return this.correctData;
+    //this.subscription = this.userService.getAllUsers().subscribe(
+    //  dataFromServer => {
+    //    this.users = dataFromServer;
+//
+    //    for(let item of this.users){
+    //      if(item.username == value.username && item.password == value.password){
+    //        return this.correctData = true;
+    //      }
+    //    }
+    //  }
+    //);
+
+    /*<3* <-- this is from Marta */
   }
 
   ngOnDestroy(): void {

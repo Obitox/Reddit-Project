@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import {Headers,Http, RequestOptions, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {User} from "./user";
 import {Observable} from "rxjs/Observable";
@@ -14,5 +14,9 @@ export class UserService {
   getAllUsers() : Observable<User[]> {
     return this.http.get(`/user/allUsers`)
       .map((res:Response) => res.json());
+  }
+
+  authenticateUser(username: String, password: String) : Observable<any> {
+    return this.http.get('/log/userLogin/'+username+'/'+password).map((res: Response)=> res.json());
   }
 }

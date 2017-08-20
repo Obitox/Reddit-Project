@@ -6,5 +6,9 @@
   "/post":{
     "target": "https://localhost:8443",
     "secure": false
+  },
+  "/log":{
+    "target": "https://localhost:8443",
+    "secure": false
   }
 }
