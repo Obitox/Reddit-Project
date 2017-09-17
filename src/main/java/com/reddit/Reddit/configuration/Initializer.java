@@ -1,9 +1,10 @@
 package com.reddit.Reddit.configuration;
 
-import org.springframework.session.web.context.AbstractHttpSessionApplicationInitializer;
+//import org.springframework.session.web.context.AbstractHttpSessionApplicationInitializer;
 
-public class Initializer extends AbstractHttpSessionApplicationInitializer {
-    public Initializer() {
-        super(RedisConfig.class);
-    }
+// extends AbstractHttpSessionApplicationInitializer
+public class Initializer {
+//    public Initializer() {
+//        super(RedisConfig.class);
+//    }
 }
