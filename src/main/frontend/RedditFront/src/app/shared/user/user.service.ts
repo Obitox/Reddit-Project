@@ -17,6 +17,8 @@ export class UserService {
   }
 
   authenticateUser(username: String, password: String) : Observable<any> {
-    return this.http.get('/log/userLogin/'+username+'/'+password).map((res: Response)=> res.json());
+    return this.http.get('/login/'+username+'/'+password).map((res: Response)=> res.json());
   }
+
+
 }
